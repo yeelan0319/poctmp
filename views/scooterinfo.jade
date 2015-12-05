@@ -1,0 +1,59 @@
+extends ../layouts/default
+
+block head
+	title Drywall is Running
+
+block neck
+	link(rel='stylesheet', href='/views/index.min.css?#{cacheBreaker}')
+
+block body
+	div.container
+		div.row
+			div.col-md-12
+				div.title
+					h4!= id + '产品规格'
+				table.table.table-borderless
+					tr.row
+						td.col-md-2 续航：
+						td.col-md-10 78公里(23.4ah) / 90公里(27ah)
+					tr.row
+						td.col-md-2 急速：
+						td.col-md-10 30公里/每小时
+					tr.row
+						td.col-md-2 动力：
+						td.col-md-10 250W，后置电动马达
+					tr.row
+						td.col-md-2 电池：
+						td.col-md-10 锂聚合物电池
+					tr.row
+						td.col-md-2 充电：
+						td.col-md-10 220伏
+					tr.row
+						td.col-md-2 刹车：
+						td.col-md-10 后轮鼓刹
+					tr.row
+						td.col-md-2 轮胎：
+						td.col-md-10 8寸，宽版	
+					tr.row
+						td.col-md-2 折叠性能：
+						td.col-md-10 1秒折叠	
+					tr.row
+						td.col-md-2 重量：
+						td.col-md-10 20公斤	
+		div.row
+			div.col-md-12
+				div.title
+					h4!= id + '生产参数'
+				table.table.table-borderless
+					tr.row
+						td.col-md-2 生产日期：
+						td.col-md-10!= pdate
+					tr.row
+						td.col-md-2 生产员：
+						td.col-md-10!= pmover
+					tr.row
+						td.col-md-2 质检日期：
+						td.col-md-10!= qdate
+					tr.row
+						td.col-md-2 质检员：
+						td.col-md-10!=qmover
